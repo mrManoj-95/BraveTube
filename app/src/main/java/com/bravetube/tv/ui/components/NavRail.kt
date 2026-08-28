@@ -1,4 +1,4 @@
-package com.bravetube.tv.ui.components
+﻿package com.bravetube.tv.ui.components
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
@@ -28,7 +28,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.focusGroup
+import androidx.compose.foundation.focusGroup
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
