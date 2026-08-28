@@ -69,19 +69,19 @@ class SearchViewModel : ViewModel() {
 
     private var debounce: Job? = null
 
-    fun append(text: String) = setQuery(query + text)
+    fun append(text: String) = updateQuery(query + text)
 
-    fun backspace() = setQuery(query.dropLast(1))
+    fun backspace() = updateQuery(query.dropLast(1))
 
-    fun clear() = setQuery("")
+    fun clear() = updateQuery("")
 
-    fun setFilter(f: String) {
+    fun selectFilter(f: String) {
         if (filter == f) return
         filter = f
         runSearch()
     }
 
-    fun setQuery(q: String) {
+    fun updateQuery(q: String) {
         query = q
         debounce?.cancel()
         if (q.isBlank()) {
@@ -220,7 +220,7 @@ fun SearchScreen(
                     FilterChip(
                         label = label,
                         selected = vm.filter == key,
-                        onClick = { vm.setFilter(key) },
+                        onClick = { vm.selectFilter(key) },
                     )
                 }
             }
