@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bt_background">#FF0F0F0F</color>
+    <color name="bt_accent">#FFFF0033</color>
+</resources>
